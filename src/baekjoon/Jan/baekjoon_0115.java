@@ -1,29 +1,30 @@
-package baekjoon;
+package baekjoon.Jan;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.StringTokenizer;
 
-public class baekjoon_0117 {
+public class baekjoon_0115 {
     public static void main(String[] args) throws Exception {
-        AB8();
+        speedAB();
     }
 
-    static void AB8() throws IOException {
+    static void speedAB() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int T = Integer.parseInt(br.readLine());
 
-        for (int i = 1; i <= T; i++) {
+        for(int i=0; i<T; i++){
             StringTokenizer st = new StringTokenizer(br.readLine());
             int A = Integer.parseInt(st.nextToken());
             int B = Integer.parseInt(st.nextToken());
-            int C = A + B;
 
-            System.out.println("Case #" + i + ": " + A + " + " + B + " = " + C);
+            bw.write((A+B) + "\n");
+
         }
+        bw.flush();
+        bw.close();
+        br.close();
     }
-
 
 }
