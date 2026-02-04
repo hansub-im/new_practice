@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 
 public class baekjoon_0202 {
     public static void main(String[] args) throws Exception {
-        No10818();
+        test("hello", "world", 2);
     }
 
         static void No10818() throws Exception{
@@ -42,6 +42,16 @@ public class baekjoon_0202 {
             }
             Arrays.sort(arr);
             System.out.println(arr[0] + " " + arr[N - 1]);
+        }
+
+        static String test(String my_string, String overwrite_string, int s){
+            String answer = "";
+            int l = my_string.length();
+            int r = overwrite_string.length();
+
+            answer = my_string.substring(0,s) + overwrite_string + my_string.substring(s+l,r);
+            return answer;
+
         }
 
 }
